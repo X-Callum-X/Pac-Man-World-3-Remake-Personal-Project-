@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +10,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Camera followCamera;
 
     private CharacterController playerController;
+
+    private Animator anim;
+
+    public TMP_Text scoreUI;
+
+    public AudioSource source;
+    public AudioClip eat;
 
     [Header("Variables")]
 
@@ -24,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
     private bool isGrounded;
 
-    private Animator anim;
+    [HideInInspector] public int score;
 
     private void Start()
     {
@@ -38,7 +43,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        anim.SetBool("isGrounded", isGrounded);
+
         Movement();
+
+        Debug.Log(isGrounded);
     }
 
     void Movement()
@@ -75,13 +84,44 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Jump") && isGrounded)
         {
             moveDirection.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+
+            anim.SetBool("hasJumped", true);
         }
 
         if (!isGrounded)
         {
             moveDirection.y += gravity * Time.deltaTime;
         }
+        else
+        {
+            anim.SetBool("hasJumped", false);
+        }
 
         playerController.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pellet"))
+        {
+            Destroy(other.gameObject);
+
+            source.PlayOneShot(eat);
+
+            score += 10;
+
+            scoreUI.text = score.ToString();
+        }
+
+        if (other.gameObject.CompareTag("PowerPellet"))
+        {
+            Destroy(other.gameObject);
+
+            source.PlayOneShot(eat);
+
+            score += 50;
+
+            scoreUI.text = score.ToString();
+        }
     }
 }
