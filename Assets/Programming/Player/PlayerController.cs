@@ -13,12 +13,12 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
-    public TMP_Text scoreUI;
-
-    public AudioSource source;
-    public AudioClip eat;
-
     [Header("Variables")]
+
+    public int hitPoints;
+    [HideInInspector] public int maxHitPoints = 4;
+
+    [HideInInspector] public int lives;
 
     public float moveSpeed = 5f;
     public float jumpHeight = 1.0f;
@@ -31,10 +31,15 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public int score;
 
+    public AudioSource source;
+    public AudioClip damage;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        hitPoints = maxHitPoints;
 
         playerController = GetComponent<CharacterController>();
 
@@ -102,26 +107,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pellet"))
+        if (other.gameObject.CompareTag("Damage"))
         {
-            Destroy(other.gameObject);
+            hitPoints -= 1;
 
-            source.PlayOneShot(eat);
-
-            score += 10;
-
-            scoreUI.text = score.ToString();
-        }
-
-        if (other.gameObject.CompareTag("PowerPellet"))
-        {
-            Destroy(other.gameObject);
-
-            source.PlayOneShot(eat);
-
-            score += 50;
-
-            scoreUI.text = score.ToString();
+            source.PlayOneShot(damage);
         }
     }
 }

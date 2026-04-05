@@ -1,0 +1,28 @@
+using JetBrains.Annotations;
+using UnityEngine;
+
+public class RotateAndBob : MonoBehaviour
+{
+    [SerializeField] int yOffset = 2;
+
+    [SerializeField, Range(0, 2)] float bobbingSpeed = 1f;
+
+    [SerializeField, Range(0, 2)] float upDownDifference = 1;
+
+    [SerializeField] float rotSpeed;
+
+    Vector3 originalPosition;
+
+    private void Start()
+    {
+        transform.position += new Vector3(0, yOffset, 0);
+        originalPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        transform.position = originalPosition + Mathf.Sin(Time.time * bobbingSpeed) * (upDownDifference / 2) * Vector3.up;
+
+        transform.Rotate(0, rotSpeed * Time.deltaTime, 0);
+    }
+}
