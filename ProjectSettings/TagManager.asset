@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pellet
   - PowerPellet
+  - Damage
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Always On Top
   - 
   - 
   - 
