@@ -11,6 +11,51 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Levels/1 - Bot Boneyard.unity
+    guid: 92e44115fb41d3448ab851557592dd8e
+  - enabled: 1
+    path: Assets/Scenes/Levels/2 - Banni Wastelands.unity
+    guid: 81a5530d5ca5c104d9b6c2a7a64d6836
+  - enabled: 1
+    path: Assets/Scenes/Levels/3 - The Spectral Cliffs.unity
+    guid: d6c26042cb82e344aa9a8853be7f9c16
+  - enabled: 1
+    path: Assets/Scenes/Levels/4 - Gogekka Central.unity
+    guid: 1b555d8490db5884e866f71a2a3c4683
+  - enabled: 1
+    path: Assets/Scenes/Levels/5 - The Spectral Vale.unity
+    guid: 7f80ffa3a3420d4429f03a578b257796
+  - enabled: 1
+    path: Assets/Scenes/Levels/6 - Zephyr Heights.unity
+    guid: f03c66846365e784391d975b53ba28ab
+  - enabled: 1
+    path: Assets/Scenes/Levels/7 - Ancient Catacombs.unity
+    guid: a405cdeb6d45e1b4eabe0e3bf3365025
+  - enabled: 1
+    path: Assets/Scenes/Levels/8 - Gogekka Heights.unity
+    guid: c22b103e98318144ab65d147b290be5c
+  - enabled: 1
+    path: Assets/Scenes/Levels/9 - Banni Canyon.unity
+    guid: 6db44c74e64659646a88b57b3f1cce53
+  - enabled: 1
+    path: Assets/Scenes/Levels/10 - Toc-Man Battle.unity
+    guid: 90af333ea405b8e43ab8fa907cd1553a
+  - enabled: 1
+    path: Assets/Scenes/Levels/11 - Cragstone Palace.unity
+    guid: 2c92738182d233148ba3d8dfe3921cb3
+  - enabled: 1
+    path: Assets/Scenes/Levels/12 - Erwin's Fortress.unity
+    guid: 4c3df5c4fb2ec0c4bbcb7e62cfd82093
+  - enabled: 1
+    path: Assets/Scenes/Levels/13 - Dungeon Gunden.unity
+    guid: 5f5253555de2f574788e2aa7bac3eca0
+  - enabled: 1
+    path: Assets/Scenes/Levels/14 - The Spectral Zenith.unity
+    guid: 3b62d46385e3c8a4186f28a97fecb9bc
+  - enabled: 1
+    path: Assets/Scenes/Levels/15 - Shadow Temple.unity
+    guid: 4ecbf93fbc553054695db6dbfe206b9c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
