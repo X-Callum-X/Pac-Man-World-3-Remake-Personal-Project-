@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        source.Stop();
         isDialogueActive = true;
 
         animator.Play("show");
