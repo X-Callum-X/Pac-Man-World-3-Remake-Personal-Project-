@@ -776,8 +776,8 @@ MonoBehaviour:
         name: Pac-Man
         icon: {fileID: 21300000, guid: 3f5f83a1bf2a68345af8549e35da621f, type: 3}
         clip: {fileID: 8300000, guid: f27ec067994d1094080621d92882d2c6, type: 3}
-      line: WOW! Solid ground! I recognize that stuff.. I'm guessing I'm miles away
-        from where I actually have to be, right?
+      line: WOW! Solid ground! I recognize that stuff.. And I'm guessing I'm miles
+        away from where I actually have to be, right?
     - character:
         name: Orson
         icon: {fileID: 21300000, guid: 978dbdacd167b58428f04e7d4b43707a, type: 3}
