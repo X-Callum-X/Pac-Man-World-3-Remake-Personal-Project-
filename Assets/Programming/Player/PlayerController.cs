@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded && moveDirection.y < 0)
         {
-            moveDirection.y = 0f;
+            moveDirection.y = -0.5f;
         }
 
         bool pressingShift = Input.GetKey(KeyCode.LeftShift);
